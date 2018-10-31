@@ -15,7 +15,6 @@ function double_author_custom_meta() {
 
 add_action( 'add_meta_boxes', 'double_author_custom_meta' );
 
-
 // Callback for the content of the metabox
 function double_author_meta_callback( $post ) {
  	wp_nonce_field( basename( __FILE__ ), 'double_author_nonce' );
@@ -51,14 +50,16 @@ function double_author_meta_callback( $post ) {
   </div> <!-- End double-author-row-content-->
 
   <?php
-  $double_author_id = get_post_meta( $post->ID, "_iip_post_second_author", true );
-	wp_dropdown_users( array(
-		'name' => '_iip_post_second_author',
-		'selected' => $double_author_id,
-		'include_selected' => true,
-		'show' => 'display_name',
-	) );
+  if ( $double_author_value == 'yes' ) {
+    $double_author_id = get_post_meta( $post->ID, "_iip_post_second_author", true );
+    wp_dropdown_users( array(
+      'name' => '_iip_post_second_author',
+      'selected' => $double_author_id,
+      'include_selected' => true,
+      'show' => 'display_name',
+    ) );
   }
+}
 
 // Saves the custom meta input
 function double_author_meta_save( $post_id ) {
@@ -73,7 +74,7 @@ function double_author_meta_save( $post_id ) {
  		return;
  	}
 
- 	// Checks for input and saves if needed
+ 	// Checks for inputs and saves if needed
  	if( isset( $_POST[ '_iip_add_second_author' ] ) ) {
  		update_post_meta( $post_id, '_iip_add_second_author', $_POST[ '_iip_add_second_author' ] );
  	}
@@ -81,6 +82,6 @@ function double_author_meta_save( $post_id ) {
   if( isset( $_POST[ '_iip_post_second_author' ] ) ) {
  		update_post_meta( $post_id, '_iip_post_second_author', $_POST[ '_iip_post_second_author' ] );
  	}
- }
+}
 
 add_action( 'save_post', 'double_author_meta_save' );
