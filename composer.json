@@ -1,11 +1,11 @@
 {
-    "name": "iip-design/iip-double-author",
+    "name": "iip-design/iip-second-author",
     "type": "wordpress-plugin",
     "description" : "Adds extra metabox to admin panel which can be used to add a second author to post bylines",
     "authors": [
         {
-            "name": "Office of Design, Bureau of International Information Programs",
-            "email": "rewersmc@america.gov"
+            "name": "Marek Rewers, Office of Design, Bureau of International Information Programs",
+            "email": "designdevops@america.gov"
         }
     ],
     "minimum-stability": "stable",
