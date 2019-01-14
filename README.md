@@ -17,7 +17,7 @@ The plugin will subsequently add two custom fields to the post metavalues:
 
 This plugin simply adds two additional fields to a post's metadata. It will not display those values on the front end out of the box. In order to display these fields you will need to add a few lines to the relevant site's theme. We suggest something like:
 
-```
+```php
 $second_author_value = get_post_meta( $this->post->ID, "_iip_add_second_author", true );
 $second_author_id = get_post_meta( $this->post->ID, "_iip_post_second_author", true );
 $second_author_name = get_userdata( $second_author_id )->display_name;

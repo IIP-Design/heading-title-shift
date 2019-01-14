@@ -22,7 +22,7 @@ function second_author_meta_callback( $post ) {
  	?>
 
 	<div class="second-author-row-content">
-    <span class="second-author-row-title"><?php _e( 'Add second author?', 'iip-second-author' )?></span><br/>
+    <span class="second-author-row-title"><?php esc_html_e( 'Add second author?', 'iip-second-author' )?></span><br/>
 
 		<div class="second-author-options" style="margin: 10px 0 15px 5px;">
       <input
@@ -33,7 +33,7 @@ function second_author_meta_callback( $post ) {
         style="margin-top:-1px; vertical-align:middle;"
         <?php checked( $second_author_value, 'yes' ); ?>
       />
-      <label for="second-author-radio-yes"><?php _e( 'Yes', 'iip-second-author' )?></label>
+      <label for="second-author-radio-yes"><?php esc_html_e( 'Yes', 'iip-second-author' )?></label>
 
 			<input
         type="radio"
@@ -44,7 +44,7 @@ function second_author_meta_callback( $post ) {
         <?php checked( $second_author_value, '' ); ?>
         <?php checked( $second_author_value, 'no' ); ?>
       />
-			<label for="second-author-radio-no"><?php _e( 'No', 'iip-second-author' )?></label>
+			<label for="second-author-radio-no"><?php esc_html_e( 'No', 'iip-second-author' )?></label>
 
     </div> <!-- End second-author-options -->
   </div> <!-- End second-author-row-content-->
