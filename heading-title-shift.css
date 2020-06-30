@@ -1,0 +1,23 @@
+.td-post-title .td-post-author-name, .td-post-title .td-post-author-name a, .td-post-title .td-post-date, .td-post-title .entry-title {
+    color :black !important;
+}
+
+.td-post-template-3 .header-contain > .td-post-title {
+    padding: 0 20px 9px 0 !important;
+    position: relative !important;
+}
+
+.td-post-template-7 .td-main-content, .td-post-template-7 .td-main-sidebar {
+    margin-top: 12px !important;
+}
+
+.td-post-template-8 > .td-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 48px 26px 48px !important;
+    background-color: #fff;
+}
+
+.td-post-title {
+    position: relative
+}
