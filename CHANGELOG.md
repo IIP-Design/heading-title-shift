@@ -8,5 +8,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Features Added:**
 
-  - Add metabox to post admin panel allowing user to select a second author for a post
-  - Selection of `Yes` option adds the relevant metafields to the selected post's metadata
+  - Add metabox to post admin panel allowing user to select whether the heading is on or below the featured image.
+  - Selection of `Checked` option adds the relevant metafields to the selected post's metadata
