@@ -13,7 +13,6 @@ The plugin will subsequently add one custom field to the post metavalues:
 | Metafield                  | Value                                             |
 |----------------------------|---------------------------------------------------|
 | `_add_heading_title_shift` | string: false or true based on checkbox selection |
-| `_iip_post_second_author`  | string: ID of the selected user                   |
 
 ## Theme Support
 
